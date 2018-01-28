@@ -188,7 +188,7 @@ th, td{
 }
 
 .btn-navbar{
-    border-radius: 5px;
+    border-radius: 4px;
     background-color: #D2D4C8;
     padding: 8px 20px 6px 20px;
 }
@@ -201,7 +201,4 @@ th, td{
     background-color: #E0E2DB !important;
 
     text-decoration: none !important;
-}
-
-.btn-bar-header{
 }
