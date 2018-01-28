@@ -118,6 +118,10 @@ th, td{
     }
 }
 
+.side-nav {
+    overflow-y: hidden;
+}
+
 .side-nav>li>ul {
     padding: 0;
     border-bottom: 1px rgba(0,0,0,.3) solid;
