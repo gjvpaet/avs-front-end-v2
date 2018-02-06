@@ -29,11 +29,12 @@ th, td{
     }
 
     #page-wrapper {
-        padding: 22px 10px;
+        padding: 0px 10px;
     }
 }
 
 .content-wrap{
+    margin-top: -50px;
     padding-left: 225px;
 }
 
@@ -188,7 +189,7 @@ th, td{
 }
 
 .btn-navbar{
-    border-radius: 5px;
+    border-radius: 4px;
     background-color: #D2D4C8;
     padding: 8px 20px 6px 20px;
 }
@@ -201,7 +202,4 @@ th, td{
     background-color: #E0E2DB !important;
 
     text-decoration: none !important;
-}
-
-.btn-bar-header{
 }
