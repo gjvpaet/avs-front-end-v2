@@ -203,3 +203,13 @@ th, td{
 
     text-decoration: none !important;
 }
+
+
+/**inventory**/
+.pcode{
+    color: #fff;
+}
+
+.tab-pane{
+    margin-left: 2%;
+}
