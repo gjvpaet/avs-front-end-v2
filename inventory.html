@@ -99,7 +99,7 @@
                                             <!--end delete-->
                                         </div>
 
-                                        <!--ADD Type MODAL-->
+                                        <!--****************ADD Type MODAL****************-->
                                         <div class="modal fade" id="serialModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                                             <div class="modal-dialog" role="document">
                                                 <div class="modal-content">
@@ -117,7 +117,7 @@
 
                                                             <!--Tab Panels-->
                                                             <div class="tab-content">
-                                                                <div id="infoTab" class="tab-pane active">
+                                                                <div id="infoTab" class="tab-pane fade in active">
                                                                     <br>
                                                                     <b>Product Code:</b> 000123<br>
                                                                     <b>Model No.:</b> 000123 <br>
@@ -174,8 +174,99 @@
                     <!--****************FILTER SEARCH STUFF********************-->
                     <div class="col-sm-2">
                         <form>
-                            <button type="button" class="btn btn-primary btn-flat btn-block" data-toggle="modal" data-target="#"><i class="fa fa-plus"></i> Add Something</button>
+                            <button type="button" class="btn btn-primary btn-flat btn-block" data-toggle="modal" data-target="#addInventoryModal"><i class="fa fa-plus"></i> Add Something</button>
+                        </form> 
+                        <div id="addInventoryModal" class="modal fade" tabindex="-1" role="dialog">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        <h4 class="modal-title">Add to Inventory</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form class="form-horizontal">
+                                            <div class="form-group">
+                                                <label for="brand" class="col-sm-3 control-label">Brand</label>
+                                                <div class="col-sm-9">
+                                                    <select class="form-control" id="brand">
+                                                        <option>---Select Brand---</option>
+                                                        <option>Electrolux</option>
+                                                        <option>Haier</option>
+                                                        <option>Toshiba</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="type" class="col-sm-3 control-label">Type</label>
+                                                <div class="col-sm-9">
+                                                    <select class="form-control" id="type">
+                                                        <option>---Select Type---</option>
+                                                        <option>Dryer</option>
+                                                        <option>Front Load Washer</option>
+                                                        <option>LED</option>
+                                                        <option>Refrigerator Two Door</option>
+                                                        <option>Top Load Washer</option>
+                                                        <option>Washing Machine</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="pcode" class="col-sm-3 control-label">Product Code</label>
+                                                <div class="col-sm-9">
+                                                    <select class="form-control" id="pcode">
+                                                        <option>---Select Product Code---</option>
+                                                        <option>00001234</option>
+                                                        <option>00001235</option>
+                                                        <option>00001236</option>
+                                                        <option>00001237</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="modelno" class="col-sm-3 control-label">Model No.</label>
+                                                <div class="col-sm-9">
+                                                    <select class="form-control" id="modelno">
+                                                        <option>---Select Model No.---</option>
+                                                        <option>00001234</option>
+                                                        <option>00001235</option>
+                                                        <option>00001236</option>
+                                                        <option>00001237</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="branch" class="col-sm-3 control-label">Branch</label>
+                                                <div class="col-sm-9">
+                                                    <select class="form-control" id="branch">
+                                                        <option>---Select Model No.---</option>
+                                                        <option>Main</option>
+                                                        <option>Pasig</option>
+                                                        <option>Tayuman</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="serial" class="col-sm-3 control-label">Serial No.</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" class="form-control" id="serial" placeholder="Serial No." required>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                                        <button type="button" class="btn btn-primary">Add</button>
+                                    </div>
+                                    </div><!-- /.modal-content -->
+                                </div><!-- /.modal-dialog -->
+                            </div><!-- /.modal -->
                             <hr>
+                        <form>
                             <div><!--BRANCH CHECKBOX-->
                                 <h4>Branch</h4>
                                 <div class="checkbox">
