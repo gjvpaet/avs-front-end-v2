@@ -120,7 +120,7 @@ th, td{
 }
 
 .side-nav {
-    overflow-y: hidden;
+    /*overflow-y: hidden;*/
 }
 
 .side-nav>li>ul {
