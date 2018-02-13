@@ -198,65 +198,68 @@
                                 <h4 class="modal-title" id="myModalLabel">Add Part</h4>
                             </div>
                             <div class="modal-body">
-                                <form>
-                                    <div class="row">
-                                        <div class="col-sm-4">
-                                            <div class="form-group">
-                                                <label for="pcode">Product Code</label>
-                                                <input type="text" class="form-control" id="pcode" placeholder="Product Code" required>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-4">
-                                            <!--******************BRAND DROPDOWN***********************-->
-                                            <div class="form-group">
-                                            <label for="brand">Brand</label>
-                                                <select class="form-control" id="brand">
-                                                    <option>---Select Brand---</option>
-                                                    <option>Electrolux</option>
-                                                    <option>Haier</option>
-                                                    <option>Toshiba</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-4">
-                                            <div class="form-group">
-                                                <label for="capacity">Capacity</label>
-                                                <input type="text" class="form-control" id="capacity" placeholder="Capacity" required>
-                                            </div>
+                                <form class="form-horizontal">
+                                    <div class="form-group">
+                                        <label for="pcode" class="col-sm-3 control-label">Product Code</label>
+                                        <div class="col-sm-9">
+                                            <select class="form-control" id="pcode">
+                                                <option>---Select Product Code---</option>
+                                                <option>00001234</option>
+                                                <option>00001235</option>
+                                                <option>00001236</option>
+                                            </select>
                                         </div>
                                     </div>
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                            <div class="form-group">
-                                                <label for="model">Model</label>
-                                                <input type="text" class="form-control" id="model" placeholder="Model" required>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div class="form-group">
-                                            <label for="apptype">Appliance Type</label>
-                                                <select class="form-control" id="apptype">
-                                                    <option>---Select Appliance Type---</option>
-                                                    <option>Dryer</option>
-                                                    <option>Front Load Washer</option>
-                                                    <option>LED</option>
-                                                    <option>Refrigerator Two Door</option>
-                                                    <option>Top Load Washer</option>
-                                                    <option>Washing Machine</option>
-                                                </select>
-                                            </div>
+
+                                    <div class="form-group">
+                                        <label for="pbrand" class="col-sm-3 control-label">Brand</label>
+                                        <div class="col-sm-9">
+                                            <select class="form-control" id="pbrand">
+                                                <option>---Select Brand---</option>
+                                                <option>Electrolux</option>
+                                                <option>Haier</option>
+                                                <option>Toshiba</option>
+                                            </select>
                                         </div>
                                     </div>
-                                    <div class="row">
-                                        <div class="col-sm-12">
-                                            <div class="form-group">
-                                                <label for="desc">Description</label>
-                                                <textarea class="form-control" rows="3" id="desc" placeholder="Description (optional)"></textarea>
-                                            </div>
+
+                                    <div class="form-group">
+                                        <label for="pcap" class="col-sm-3 control-label">Capacity</label>
+                                        <div class="col-sm-9">
+                                            <select class="form-control" id="pcap">
+                                                <option>---Select Capacity---</option>
+                                                <option>1kg</option>
+                                                <option>2kg</option>
+                                                <option>3kg</option>
+                                            </select>
                                         </div>
                                     </div>
-                                    <div>
-                                        <label class="checkbox-inline"><input type="checkbox" value="active">Active</label>
+
+                                    <div class="form-group">
+                                        <label for="pmod" class="col-sm-3 control-label">Model</label>
+                                        <div class="col-sm-9">
+                                            <select class="form-control" id="pmod">
+                                                <option>---Select Model---</option>
+                                                <option>Model1</option>
+                                                <option>Model2</option>
+                                                <option>Model3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="ptype" class="col-sm-3 control-label">Type</label>
+                                        <div class="col-sm-9">
+                                            <select class="form-control" id="ptype">
+                                                <option>---Select Appliance Type---</option>
+                                                <option>Dryer</option>
+                                                <option>Front Load Washer</option>
+                                                <option>LED</option>
+                                                <option>Refrigerator Two Door</option>
+                                                <option>Top Load Washer</option>
+                                                <option>Washing Machine</option>
+                                            </select>
+                                        </div>
                                     </div>
                                 </form>
                             </div>
