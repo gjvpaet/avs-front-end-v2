@@ -66,237 +66,108 @@
             </div>
             <div class="content-wrap">
                 <div>
-                    <h3><b>ESTIMATE</b></h3>
-                    <br>
+                    <h3><b>ISSUE ESTIMATE</b></h3>
                 </div>
+                <hr>
                 <div>
-                    <button type="button" class="btn btn-primary btn-flat" data-toggle="modal" data-target="#addEstimateModal"><i class="fa fa-plus"></i> Add New Estimate</button>
-                    <button class="btn btn-primary btn-flat"><i class="fa fa-upload"></i> Upload Records</button>
-                    <button class="btn btn-primary btn-flat"><i class="fa fa-download"></i> Download Records</button>
-                
-                    <!--ADD ESTIMATE MODAL-->
-                    <div class="modal fade" id="addEstimateModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                <h4 class="modal-title" id="myModalLabel">Add Estimate</h4>
-                            </div>
-                            <div class="modal-body">
-                                <form class="form-horizontal">
-
-                                    <div class="form-group">
-                                        <label for="formstatus" class="col-sm-3 control-label">Form Status</label>
-                                        <div class="col-sm-9">
-                                            <select class="form-control" id="formstatus">
-                                                <option>---Select Form Status---</option>
-                                                <option>Waiting</option>
-                                                <option>Approved</option>
-                                                <option>Cancelled</option>
-                                            </select>
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#customerInfo">Customer Information</a></li>
+                        <li><a href="#registrarInfo">Registrar Information</a></li>
+                        <li><a href="#tab3">Tab 3</a></li>
+                    </ul>
+                    <br>
+                    <div class="tab-content">
+                        <!--********************CUSTOMER INFORMATION************************-->
+                        <div id="customerInfo" class="tab-pane fade in active">
+                            <form>
+                                <div class="row">
+                                    <div class="col-sm-5">
+                                        <div class="form-group">
+                                            <label for="customerFirst">First Name</label>
+                                            <input id="customerFirst" type="text" class="form-control" placeholder="First Name" required>
                                         </div>
                                     </div>
-
-                                    <div class="form-group">
-                                        <label for="substatus" class="col-sm-3 control-label">Sub Status</label>
-                                        <div class="col-sm-9">
-                                            <select class="form-control" id="substatus">
-                                                <option>---Select Sub Status---</option>
-                                                <option>For Deliver</option>
-                                                <option>For Part Request</option>
-                                                <option>For Pickup (Repaired)</option>
-                                                <option>For Pickup (RTC)</option>
-                                                <option>For Pullout</option>
-                                                <option>Refuse to Pay</option>
-                                            </select>
+                                    <div class="col-sm-2">
+                                        <div class="form-group">
+                                            <label for="middleInitial">M. I.</label>
+                                            <input id="middleInitial" type="text" class="form-control" placeholder="M.I." required>
                                         </div>
                                     </div>
-
-                                    <div class="form-group">
-                                        <label for="branch" class="col-sm-3 control-label">Branch</label>
-                                        <div class="col-sm-9">
-                                            <select class="form-control" id="branch">
-                                                <option>---Select Branch---</option>
-                                                <option>Main</option>
-                                                <option>Tayuman</option>
-                                                <option>Tondo</option>
-                                                <option>Pasig</option>
-                                            </select>
+                                    <div class="col-sm-5">
+                                        <div class="form-group">
+                                            <label for="customerLast">Last Name</label>
+                                            <input id="customerLasst" type="text" class="form-control" placeholder="Last Name" required>
                                         </div>
                                     </div>
-
-                                    <div class="form-group">
-                                        <label for="salestype" class="col-sm-3 control-label">Sales Type</label>
-                                        <div class="col-sm-9">
-                                            <select class="form-control" id="salestype">
-                                                <option>---Select Sales Type---</option>
-                                                <option>TEST</option>
-                                                <option>CAWP</option>
-                                                <option>CANP</option>
-                                                <option>PKUP</option>
-                                                <option>DELV</option>
-                                                <option>INST</option>
-                                            </select>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="form-group">
+                                            <label for="customerAddress">Address</label>
+                                            <textarea id="customerAddress" class="form-control" rows="3" placeholder="P. Sherman 42, wallabay way, sydney"></textarea>
                                         </div>
                                     </div>
+                                </div>
+                            </form>
 
-                                    <div class="form-group">
-                                        <label for="billto" class="col-sm-3 control-label">Bill To</label>
-                                        <div class="col-sm-9">
-                                            <input type="text" class="form-control" id="billto" placeholder="Bill To" required>
+                            <br>
+                            <h2>Contact Information</h2>
+                            <table class="table table-condensed table-hover">
+                                <thead>
+                                    <th>Contact Details</th>
+                                    <th>Contact Type</th>
+                                    <th>Notes</th>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1234-567-8900</td>
+                                        <td>Mobile</td>
+                                        <td>Smart</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <br>
+
+                            <form>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="contactNum">Contact Number</label>
+                                            <input type="number" id="contactNum" class="form-control" placeholder="1234-567-8900" required>
                                         </div>
                                     </div>
-
-                                    <div class="form-group">
-                                        <label for="shipto" class="col-sm-3 control-label">Ship To</label>
-                                        <div class="col-sm-9">
-                                            <input type="text" class="form-control" id="shipto" placeholder="Ship To" required>
+                                    <div class="col-sm-6">
+                                        <label for="contactType">Contact Type</label>
+                                        <select class="form-control" id="contactType">
+                                            <option>Telephone</option>
+                                            <option>Mobile</option>
+                                            <option>Email</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="form-group">
+                                            <label for="notes">Notes</label>
+                                            <textarea id="notes" class="form-control" rows="3" placeholder="Write notes here..."></textarea>
                                         </div>
                                     </div>
+                                </div>
+                                <button class="btn btn-primary"><i class="fa fa-plus"></i> Add</button>
+                            </form>
+                        </div><!--.customer info-->
 
-                                    <div class="form-group">
-                                        <label for="cusnotes" class="col-sm-3 control-label">Customer Notes</label>
-                                        <div class="col-sm-9">
-                                            <textarea class="form-control" rows="3" id="cusnotes" placeholder="Notes (optional)"></textarea>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-primary">Add</button>
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                                
-                            </div>
-                            </div>
-                        </div>
-                    </div><!-- /.modal -->
-                </div>
-                <br>
-                <br>
-                <div class="row">
-                    <div class="col-sm-12">
-                        <table class="table table-condensed table-hover">
-                            <thead>
-                                <th>Form Status</th>
-                                <th>Sub Status</th>
-                                <th>Sales Type</th>
-                                <th>Bill To</th>
-                                <th>Ship To</th>
-                                <th>Customer Notes</th>
-                                <th></th>
-                                <th></th>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Waiting</td>
-                                    <td>For Part Request</td>
-                                    <td>TEST</td>
-                                    <td>Cardo Dalisay</td>
-                                    <td>Cardo Dalisay</td>
-                                    <td>EWP10742 EU(PH) FRONT LOAD WAS FLW 7KG 1000RPM (60)</td>
-                                    <td><button type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#editEstimateModal">Edit</button></td>
-                                    <td><button type="button" class="btn btn-danger btn-xs">Delete</button></td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <!--********************REGISTRAR INFORMATION************************-->
+                        <div id="registrarInfo" class="tab-pane fade">
+                            <h1>henlo</h1>
+                        </div><!--.registrar info-->
 
-                     <!--EDIT ESTIMATE MODAL-->
-                    <div class="modal fade" id="editEstimateModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                <h4 class="modal-title" id="myModalLabel">Edit Estimate</h4>
-                            </div>
-                            <div class="modal-body">
-                                <form class="form-horizontal">
-
-                                    <div class="form-group">
-                                        <label for="formstatus" class="col-sm-3 control-label">Form Status</label>
-                                        <div class="col-sm-9">
-                                            <select class="form-control" id="formstatus">
-                                                <option>---Select Form Status---</option>
-                                                <option>Waiting</option>
-                                                <option>Approved</option>
-                                                <option>Cancelled</option>
-                                            </select>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="substatus" class="col-sm-3 control-label">Sub Status</label>
-                                        <div class="col-sm-9">
-                                            <select class="form-control" id="substatus">
-                                                <option>---Select Sub Status---</option>
-                                                <option>For Deliver</option>
-                                                <option>For Part Request</option>
-                                                <option>For Pickup (Repaired)</option>
-                                                <option>For Pickup (RTC)</option>
-                                                <option>For Pullout</option>
-                                                <option>Refuse to Pay</option>
-                                            </select>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="branch" class="col-sm-3 control-label">Branch</label>
-                                        <div class="col-sm-9">
-                                            <select class="form-control" id="branch">
-                                                <option>---Select Branch---</option>
-                                                <option>Main</option>
-                                                <option>Tayuman</option>
-                                                <option>Tondo</option>
-                                                <option>Pasig</option>
-                                            </select>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="salestype" class="col-sm-3 control-label">Sales Type</label>
-                                        <div class="col-sm-9">
-                                            <select class="form-control" id="salestype">
-                                                <option>---Select Sales Type---</option>
-                                                <option>TEST</option>
-                                                <option>CAWP</option>
-                                                <option>CANP</option>
-                                                <option>PKUP</option>
-                                                <option>DELV</option>
-                                                <option>INST</option>
-                                            </select>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="billto" class="col-sm-3 control-label">Bill To</label>
-                                        <div class="col-sm-9">
-                                            <input type="text" class="form-control" id="billto" placeholder="Bill To" required>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="shipto" class="col-sm-3 control-label">Ship To</label>
-                                        <div class="col-sm-9">
-                                            <input type="text" class="form-control" id="shipto" placeholder="Ship To" required>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="cusnotes" class="col-sm-3 control-label">Customer Notes</label>
-                                        <div class="col-sm-9">
-                                            <textarea class="form-control" rows="3" id="cusnotes" placeholder="Notes (optional)"></textarea>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-primary">Save Changes</button>
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                                
-                            </div>
-                            </div>
-                        </div>
-                    </div><!-- /.modal -->
+                        <!--********************TAB3************************-->
+                        <div id="tab3" class="tab-pane fade">
+                            <h3>h a l l o</h3>
+                        </div><!--. TAB3-->
                     </div>
+
                 </div>
             </div>
         </div>
