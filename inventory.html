@@ -70,99 +70,90 @@
                         <table class="table table-condensed table-hover" style="border-collapse: collapse">
                             <thead>
                                 <tr>
+                                    <th>Serial No.</th>
+                                    <th>Branch</th>
                                     <th>Product Code</th>
                                     <th>Model No.</th>
                                     <th>Type</th>
                                     <th>Brand</th>
-                                    <th>Branch</th>
-                                    <th>Quantity</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 
                                 <tr>
-                                    <td><button class="btn btn-success btn-xs pcode" type="button" data-toggle="collapse" data-target="#collapseItem" aria-expanded="false">00001234</button></td>
-                                    <td>001</td>
+                                    <td><button class="btn btn-success btn-xs pcode" type="button" data-toggle="modal" data-target="#serialModal">00001234</button></td>
+                                    <td>Tayuman</td>
+                                    <td>0001</td>
+                                    <td>00AB</td>
                                     <td>Elesi</td>
                                     <td>Electrolux</td>
-                                    <td>Tayuman</td>
-                                    <td>3</td>    
+                                    
                                 </tr>
-                                
-                                <tr>
-                                    <td>
-                                    <div class="collapse" id="collapseItem">
-                                        <div>
-                                            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#serialModal"><i class="fa fa-caret-right"></i>&nbsp;Serial 1</button><br>
-                                                
-                                            <!--delete this nalang hehe-->
-                                            <button type="button" class="btn btn-link"><i class="fa fa-caret-right"></i>&nbsp;Serial 2</button><br>
-                                            <button type="button" class="btn btn-link"><i class="fa fa-caret-right"></i>&nbsp;Serial 3</button>
-                                            <!--end delete-->
-                                        </div>
+                            </tbody>
+                        </table>
+                    </div>
 
-                                        <!--****************Serial MODAL//Modal 1****************-->
-                                        <div class="modal fade" id="serialModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                                            <div class="modal-dialog" role="document">
-                                                <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                                    <h4 class="modal-title" id="myModalLabel">Item</h4>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <div class="row">
-                                                        <div class="col-sm-9">
-                                                            <ul class="nav nav-tabs">
-                                                                <li class="active"><a href="#infoTab">Info</a></li>
-                                                                <li><a href="#logsTab">Logs</a></li>
-                                                            </ul>
+                    <!--****************Serial MODAL//Modal 1****************-->
+                    <div class="modal fade" id="serialModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        <h4 class="modal-title" id="myModalLabel">Item</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col-sm-9">
+                                            <ul class="nav nav-tabs">
+                                                <li class="active"><a href="#infoTab">Info</a></li>
+                                                <li><a href="#logsTab">Logs</a></li>
+                                            </ul>
 
-                                                            <!--Tab Panels-->
-                                                            <div class="tab-content">
-                                                                <div id="infoTab" class="tab-pane fade in active">
-                                                                    <br>
-                                                                    <b>Product Code:</b> 000123<br>
-                                                                    <b>Model No.:</b> 000123 <br>
-                                                                    <b>Type:</b> Kita <br>
-                                                                    <b>Brand:</b> Electrolux <br>
-                                                                    <b>Serial:</b> 123456
-                                                                </div>
-                                                                <div id="logsTab" class="tab-pane fade">
-                                                                    <table class="table table-condensed table-hover">
-                                                                        <thead>
-                                                                            <th>Date</th>
-                                                                            <th>Remarks</th>
-                                                                        </thead>
-                                                                        <tbody>
-                                                                            <tr>
-                                                                                <td>10-18-2017</td>
-                                                                                <td>Relocated to xxx</td>
-                                                                            </tr>
-                                                                            <tr>
-                                                                                <td>4-8-2017</td>
-                                                                                <td>Added to Inventory</td>
-                                                                            </tr>
-                                                                        </tbody>
-                                                                    </table>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-sm-3">
-                                                            <button type="button" class="btn btn-success btn-block btn-sm" data-toggle="modal" data-target="#allocateModal" data-dismiss="modal">Allocate</button>
-                                                            <hr>
-                                                            <h4>Danger Zone</h4>
-                                                            <form>
-                                                                <button type="button" class="btn btn-danger btn-block btn-sm" data-toggle="modal" data-target="#deleteModal" data-dismiss="modal">Delete</button>
-                                                                <button type="button" class="btn btn-danger btn-block btn-sm" data-toggle="modal" data-target="#relocateModal" data-dismiss="modal">Relocate</button>
-                                                            </form>
-                                                        </div>
-                                                    </div>
+                                            <div class="tab-content">
+                                                <div id="infoTab" class="tab-pane fade in active">
+                                                    <br>
+                                                    <b>Product Code:</b> 000123<br>
+                                                    <b>Model No.:</b> 000123 <br>
+                                                    <b>Type:</b> Kita <br>
+                                                    <b>Brand:</b> Electrolux <br>
+                                                    <b>Serial:</b> 123456
                                                 </div>
+                                                <div id="logsTab" class="tab-pane fade">
+                                                    <table class="table table-condensed table-hover">
+                                                        <thead>
+                                                            <th>Date</th>
+                                                            <th>Remarks</th>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>10-18-2017</td>
+                                                                <td>Relocated to xxx</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>4-8-2017</td>
+                                                                <td>Added to Inventory</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
                                                 </div>
                                             </div>
-                                        </div><!-- /.modal -->
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <button type="button" class="btn btn-success btn-block btn-sm" data-toggle="modal" data-target="#allocateModal" data-dismiss="modal">Allocate</button>
+                                            <hr>
+                                            <h4>Danger Zone</h4>
+                                            <form>
+                                                <button type="button" class="btn btn-danger btn-block btn-sm" data-toggle="modal" data-target="#deleteModal" data-dismiss="modal">Delete</button>
+                                                <button type="button" class="btn btn-danger btn-block btn-sm" data-toggle="modal" data-target="#relocateModal" data-dismiss="modal">Relocate</button>
+                                             </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- /.modal -->
 
-                                        <!--****************Delete// Modal 2****************-->
+                    <!--****************Delete// Modal 2****************-->
                                         <div class="modal fade" id="deleteModal" tabindex="-1">
                                             <div class="modal-dialog" role="document">
                                                 <div class="modal-content">
@@ -261,18 +252,7 @@
                                                 </div>
                                             </div>
                                         </div><!--./modal4-->
-                                    </div>
-                                    </td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                
-                            </tbody>
-                        </table>
-                    </div>
+
                     <!--****************FILTER SEARCH STUFF********************-->
                     <div class="col-sm-2">
                         <form>
