@@ -84,14 +84,21 @@
                                     hello
                                 </div>
                                 <div class="col-sm-6">
-                                    <form class="form-inline">
-                                        <div class="form-group">
-                                          <div class="input-group">
-                                            <div class="input-group-addon"><i class="fa fa-fw fa-search"></i></div>
-                                            <input type="text" class="form-control" id="searchCustomer" placeholder="Search Customer">
-                                          </div>
+                                    <!-- Removed form-inline class in form tag and put the form controls in a medium 9 column and button in a 3 medium column -->
+                                    <form>
+                                        <div class="row">
+                                            <div class="col-md-9 col-sm-9 col-xs-12">
+                                                <div class="form-group">
+                                                    <div class="input-group">
+                                                      <div class="input-group-addon"><i class="fa fa-fw fa-search"></i></div>
+                                                      <input type="text" class="form-control" id="searchCustomer" placeholder="Search Customer">
+                                                    </div>
+                                                  </div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-3 col-xs-12">
+                                                <button type="submit" class="btn btn-primary">Search</button>
+                                            </div>
                                         </div>
-                                        <button type="submit" class="btn btn-primary">Search</button>
                                     </form>
                                 </div>
                             </div>
