@@ -25,19 +25,16 @@
                     <ul id="submenu-1" class="collapse">
                         <li><a href="appliance.html"><i class="fa fa-angle-double-right"></i> Appliance</a></li>
                         <li><a href="brand.html"><i class="fa fa-angle-double-right"></i> Brand</a></li>
+                        <li><a href="branch.html"><i class="fa fa-angle-double-right"></i> Branch</a></li>
                         <li><a href="customer.html"><i class="fa fa-angle-double-right"></i> Customer</a></li>
                         <li><a href="employee.html"><i class="fa fa-angle-double-right"></i> Employee</a></li>
                         <li><a href="parts.html"><i class="fa fa-angle-double-right"></i> Parts</a></li>
                         <li><a href="type.html"><i class="fa fa-angle-double-right"></i> Type</a></li>
+                        <li><a href="vendor.html"><i class="fa fa-angle-double-right"></i> Vendor</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#" data-toggle="collapse" data-target="#submenu-2"><i class="fa fa-fw fa-archive"></i>  INVENTORY <i class="fa fa-fw fa-angle-down pull-right"></i></a>
-                    <ul id="submenu-2" class="collapse">
-                        <li><a href="addappliance.html"><i class="fa fa-angle-double-right"></i> Add Item</a></li>
-                        <li><a href="#"><i class="fa fa-angle-double-right"></i> Something</a></li>
-                        <li><a href="#"><i class="fa fa-angle-double-right"></i> Something</a></li>
-                    </ul>
+                    <a href="inventory.html"><i class="fa fa-fw fa-archive"></i>  INVENTORY </a>
                 </li>
                 <li>
                     <a href="#" data-toggle="collapse" data-target="#submenu-3"><i class="fa fa-fw fa-paper-plane-o"></i>  TRANSACTIONS <i class="fa fa-fw fa-angle-down pull-right"></i></a>
@@ -149,78 +146,37 @@
                                         </div>
                                     </div>
 
-                                    <!--ADD PART-->
-                                    <div>
-                                        <button class="btn btn-success col-sm-3" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                                        Add Part
-                                        </button>
+                                    <hr>
+                                    <div class="form-group">
+                                        <div class="col-sm-3">
+                                            <button type="button" class="btn btn-primary btn-flat" data-toggle="modal" data-target="#addPModal" data-dismiss="modal"><i class="fa fa-plus"></i> Add Part</button>
+                                        </div>
                                         <div class="col-sm-9"></div>
                                     </div>
-                                    <br>
-                                    <br>
-                                    <div class="collapse" id="collapseExample">
-                                    <div class="well">
-                                        <form class="form-horizontal">
-                                            <div class="form-group">
-                                                <label for="pcode" class="col-sm-3 control-label">Product Code</label>
-                                                <div class="col-sm-9">
-                                                    <input type="text" class="form-control" id="pcode" placeholder="Product Code" required>
-                                                </div>
-                                            </div>
-                                            <!--******************BRAND DROPDOWN***********************-->
-                                            <div class="form-group">
-                                                <label for="brand" class="col-sm-3 control-label">Brand</label>
-                                                <div class="col-sm-9">
-                                                    <select class="form-control" id="brand">
-                                                        <option>---Select Brand---</option>
-                                                        <option>Electrolux</option>
-                                                        <option>Haier</option>
-                                                        <option>Toshiba</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                              
-                                            <div class="form-group">
-                                                <label for="capacity" class="col-sm-3 control-label">Capacity</label>
-                                                <div class="col-sm-9">
-                                                    <input type="text" class="form-control" id="capacity" placeholder="Capacity" required>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="form-group">
-                                                <label for="model" class="col-sm-3 control-label">Model</label>
-                                                <div class="col-sm-9">
-                                                    <input type="text" class="form-control" id="model" placeholder="Model" required>
-                                                </div>
-                                            </div>
 
-                                            <div class="form-group">
-                                                <label for="apptype" class="col-sm-3 control-label">Appliance Type</label>
-                                                <div class="col-sm-9">
-                                                    <select class="form-control" id="apptype">
-                                                        <option>---Select Appliance Type---</option>
-                                                        <option>Dryer</option>
-                                                        <option>Front Load Washer</option>
-                                                        <option>LED</option>
-                                                        <option>Refrigerator Two Door</option>
-                                                        <option>Top Load Washer</option>
-                                                        <option>Washing Machine</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="desc" class="col-sm-3 control-label">Description</label>
-                                                <div class="col-sm-9">
-                                                    <textarea class="form-control" rows="3" id="desc" placeholder="Description (optional)"></textarea>
-                                                </div>
-                                            </div>
-                                            <div>
-                                                <div class="col-sm-3"></div>
-                                                <label class="checkbox-inline"><input type="checkbox" value="active">Active</label>
-                                            </div>
-                                        </form>
+                                    <div>
+                                        <table class="table table-condensed table-hover">
+                                            <thead>
+                                                <th>Product Code</th>
+                                                <th>Description</th>
+                                                <th>Capacity</th>
+                                                <th>Type</th>
+                                                <th>Brand</th>
+                                                <th>Model</th>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>EWP10742</td>
+                                                    <td>EWP10742 EU(PH) FRONT LOAD WAS FLW 7KG 1000RPM (60)</td>
+                                                    <td>7Kg</td>
+                                                    <td>Front Load Washer</td>
+                                                    <td>Electrolux</td>
+                                                    <td>EWP10742</td>
+                                                    
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
-                                    </div><!--...add part-->
                                 </form>
                             </div>
                             <div class="modal-footer">
@@ -232,6 +188,90 @@
                         </div>
                     </div><!-- /.modal -->
                 </div>
+
+                <!--****************ADD PART// Modal 2****************-->
+                <div class="modal fade" id="addPModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title" id="myModalLabel">Add Part</h4>
+                            </div>
+                            <div class="modal-body">
+                                <form class="form-horizontal">
+                                    <div class="form-group">
+                                        <label for="pcode" class="col-sm-3 control-label">Product Code</label>
+                                        <div class="col-sm-9">
+                                            <select class="form-control" id="pcode">
+                                                <option>---Select Product Code---</option>
+                                                <option>00001234</option>
+                                                <option>00001235</option>
+                                                <option>00001236</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="pbrand" class="col-sm-3 control-label">Brand</label>
+                                        <div class="col-sm-9">
+                                            <select class="form-control" id="pbrand">
+                                                <option>---Select Brand---</option>
+                                                <option>Electrolux</option>
+                                                <option>Haier</option>
+                                                <option>Toshiba</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="pcap" class="col-sm-3 control-label">Capacity</label>
+                                        <div class="col-sm-9">
+                                            <select class="form-control" id="pcap">
+                                                <option>---Select Capacity---</option>
+                                                <option>1kg</option>
+                                                <option>2kg</option>
+                                                <option>3kg</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="pmod" class="col-sm-3 control-label">Model</label>
+                                        <div class="col-sm-9">
+                                            <select class="form-control" id="pmod">
+                                                <option>---Select Model---</option>
+                                                <option>Model1</option>
+                                                <option>Model2</option>
+                                                <option>Model3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="ptype" class="col-sm-3 control-label">Type</label>
+                                        <div class="col-sm-9">
+                                            <select class="form-control" id="ptype">
+                                                <option>---Select Appliance Type---</option>
+                                                <option>Dryer</option>
+                                                <option>Front Load Washer</option>
+                                                <option>LED</option>
+                                                <option>Refrigerator Two Door</option>
+                                                <option>Top Load Washer</option>
+                                                <option>Washing Machine</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addAppModal" data-dismiss="modal">Add</button>
+                                <button type="button" class="btn btn-default" data-toggle="modal" data-target="#addAppModal" data-dismiss="modal">Cancel</button>
+                                
+                            </div>
+                            </div>
+                        </div>
+                    </div><!-- /.modal -->
+
                 <br>
                 <br>
                 <div class="row">

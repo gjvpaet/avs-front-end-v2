@@ -120,7 +120,7 @@ th, td{
 }
 
 .side-nav {
-    overflow-y: hidden;
+    /*overflow-y: hidden;*/
 }
 
 .side-nav>li>ul {
@@ -202,4 +202,14 @@ th, td{
     background-color: #E0E2DB !important;
 
     text-decoration: none !important;
+}
+
+
+/**inventory**/
+.pcode{
+    color: #fff;
+}
+
+.tab-pane{
+    margin-left: 2%;
 }

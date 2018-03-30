@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>AVS | Customer</title>
+        <title>AVS | Branch</title>
         <!--CSS--><!-- Latest compiled and minified CSS -->
         <link href="css/style.css" rel="stylesheet" type="text/css" media="all">
         <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
@@ -62,77 +62,57 @@
             <!-- Page Heading -->
             <div class="content-wrap">
                 <div>
-                    <h3><b>CUSTOMER</b></h3>
+                    <h3><b>BRANCH</b></h3>
                     <br>
                 </div>
                 <div>
-                    <button type="button" class="btn btn-primary btn-flat" data-toggle="modal" data-target="#addCustomerModal"><i class="fa fa-plus"></i> Add Customer</button>
-                    <button class="btn btn-primary btn-flat"><i class="fa fa-upload"></i> Upload Records</button>
-                    <button class="btn btn-primary btn-flat"><i class="fa fa-download"></i> Download Records</button>
+                    <button type="button" class="btn btn-primary btn-flat" data-toggle="modal" data-target="#addBranchModal"><i class="fa fa-plus"></i> Add New Branch</button>
                 
-                    <!--ADD CUSTOMER MODAL-->
-                    <div class="modal fade" id="addCustomerModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <!--ADD Branch MODAL-->
+                    <div class="modal fade" id="addBranchModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                <h4 class="modal-title" id="myModalLabel">Add Customer</h4>
+                                <h4 class="modal-title" id="myModalLabel">Add Branch</h4>
                             </div>
                             <div class="modal-body">
                                 <form class="form-horizontal">
+
                                     <div class="form-group">
-                                        <label for="custype" class="col-sm-3 control-label">Customer Type</label>
+                                        <label for="bchname" class="col-sm-3 control-label">Branch Name</label>
                                         <div class="col-sm-9">
-                                            <select class="form-control" id="custype">
-                                                <option>---Select Customer Type---</option>
-                                                <option>Commercial</option>
-                                                <option>Non-Profit</option>
-                                                <option>Residential</option>
-                                                <option>ASC Contract</option>
-                                                <option>Dealer</option>
-                                            </select>
+                                            <input type="text" class="form-control" id="bchname" placeholder="Branch Name" required>
                                         </div>
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="comname" class="col-sm-3 control-label">Company Name</label>
+                                        <label for="bchadd" class="col-sm-3 control-label">Branch Address</label>
                                         <div class="col-sm-9">
-                                            <input type="text" class="form-control" id="comname" placeholder="Company Name" required>
+                                            <textarea class="form-control" rows="3" id="bchadd" placeholder="Branch Address"></textarea>
                                         </div>
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="fname" class="col-sm-3 control-label">First Name</label>
+                                        <label for="connum" class="col-sm-3 control-label">Contact Number</label>
                                         <div class="col-sm-9">
-                                            <input type="text" class="form-control" id="fname" placeholder="First Name" required>
+                                            <input type="number" class="form-control" id="connum" placeholder="Contact Number" required>
                                         </div>
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="lname" class="col-sm-3 control-label">Last Name</label>
+                                        <label for="branchmail" class="col-sm-3 control-label">Email Address</label>
                                         <div class="col-sm-9">
-                                            <input type="text" class="form-control" id="lname" placeholder="Last Name" required>
+                                            <input type="email" class="form-control" id="branchmail" placeholder="Email Address" required>
                                         </div>
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="address" class="col-sm-3 control-label">Complete Address</label>
-                                        <div class="col-sm-9">
-                                            <textarea class="form-control" rows="2" id="address" placeholder="House/Unit No., Street, Barangay, City/Municipality, Region"></textarea>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="mobilenum" class="col-sm-3 control-label">Mobile Number</label>
-                                        <div class="col-sm-9">
-                                            <input type="number" class="form-control" id="mobilenum" placeholder="Mobile Number" required>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="telnum" class="col-sm-3 control-label">Landline</label>
-                                        <div class="col-sm-9">
-                                            <input type="tel" class="form-control" id="telnum" placeholder="Mobile Number">
+                                        <div class="col-sm-3"></div>
+                                        <div class="col-sm-9"> 
+                                            <label class="checkbox-inline">
+                                                <input type="checkbox" value="active">Active
+                                            </label>
                                         </div>
                                     </div>
                                 </form>
@@ -152,94 +132,72 @@
                     <div class="col-sm-12">
                         <table class="table table-condensed table-hover">
                             <thead>
-                                <th>Company Name</th>
-                                <th>First Name</th>
-                                <th>Last Name</th>
-                                <th>Customer Type</th>
-                                <th>Address</th>
-                                <th>Landline</th>
-                                <th>Mobile No.</th>
-                                <th></th>
+                                <th>Branch Name</th>
+                                <th>Branch Address</th>
+                                <th>Contact Number</th>
+                                <th>Email Address</th>
+                                <th>Active</th>
                                 <th></th>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>Electrolux</td>
-                                    <td>Cardo</td>
-                                    <td>Dalisay</td>
-                                    <td>Dealer</td>
-                                    <td>22, Wallabay Way, Sydney</td>
-                                    <td>7471234</td>
+                                    <td>Tayuman</td>
+                                    <td>42 Wallabay Way, Sydney, Australia</td>
                                     <td>09171234567</td>
-                                    <td><button type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#editCustomerModal">Edit</button></td>
-                                    <td><button type="button" class="btn btn-danger btn-xs">Delete</button></td>
+                                    <td>avs_tayuman@gmail.com</td>
+                                    <td>True</td>
+                                    <td>
+                                        <button type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#editBranchModal">Edit</button>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
 
-                    <!--EDIT CUSTOMER MODAL-->
-                    <div class="modal fade" id="editCustomerModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <!--ADD BRANCH MODAL-->
+                    <div class="modal fade" id="editBranchModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                <h4 class="modal-title" id="myModalLabel">Edit Customer</h4>
+                                <h4 class="modal-title" id="myModalLabel">Edit Branch</h4>
                             </div>
                             <div class="modal-body">
                                 <form class="form-horizontal">
+
                                     <div class="form-group">
-                                        <label for="custype" class="col-sm-3 control-label">Customer Type</label>
+                                        <label for="bchname" class="col-sm-3 control-label">Branch Name</label>
                                         <div class="col-sm-9">
-                                            <select class="form-control" id="custype">
-                                                <option>---Select Customer Type---</option>
-                                                <option>Commercial</option>
-                                                <option>Non-Profit</option>
-                                                <option>Residential</option>
-                                                <option>ASC Contract</option>
-                                                <option>Dealer</option>
-                                            </select>
+                                            <input type="text" class="form-control" id="bchname" placeholder="Branch Name" required>
                                         </div>
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="comname" class="col-sm-3 control-label">Company Name</label>
+                                        <label for="bchadd" class="col-sm-3 control-label">Branch Address</label>
                                         <div class="col-sm-9">
-                                            <input type="text" class="form-control" id="comname" placeholder="Company Name" required>
+                                            <textarea class="form-control" rows="3" id="bchadd" placeholder="Branch Address"></textarea>
                                         </div>
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="fname" class="col-sm-3 control-label">First Name</label>
+                                        <label for="connum" class="col-sm-3 control-label">Contact Number</label>
                                         <div class="col-sm-9">
-                                            <input type="text" class="form-control" id="fname" placeholder="First Name" required>
+                                            <input type="number" class="form-control" id="connum" placeholder="Contact Number" required>
                                         </div>
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="lname" class="col-sm-3 control-label">Last Name</label>
+                                        <label for="branchmail" class="col-sm-3 control-label">Email Address</label>
                                         <div class="col-sm-9">
-                                            <input type="text" class="form-control" id="lname" placeholder="Last Name" required>
+                                            <input type="email" class="form-control" id="branchmail" placeholder="Email Address" required>
                                         </div>
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="address" class="col-sm-3 control-label">Complete Address</label>
-                                        <div class="col-sm-9">
-                                            <textarea class="form-control" rows="2" id="address" placeholder="House/Unit No., Street, Barangay, City/Municipality, Region"></textarea>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="mobilenum" class="col-sm-3 control-label">Mobile Number</label>
-                                        <div class="col-sm-9">
-                                            <input type="number" class="form-control" id="mobilenum" placeholder="Mobile Number" required>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="telnum" class="col-sm-3 control-label">Landline</label>
-                                        <div class="col-sm-9">
-                                            <input type="tel" class="form-control" id="telnum" placeholder="Mobile Number">
+                                        <div class="col-sm-3"></div>
+                                        <div class="col-sm-9"> 
+                                            <label class="checkbox-inline">
+                                                <input type="checkbox" value="active">Active
+                                            </label>
                                         </div>
                                     </div>
                                 </form>

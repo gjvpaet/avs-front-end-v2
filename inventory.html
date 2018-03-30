@@ -1,0 +1,439 @@
+<html>
+    <head>
+        <title>AVS | Inventory</title>
+        <!--CSS--><!-- Latest compiled and minified CSS -->
+        <link href="css/style.css" rel="stylesheet" type="text/css" media="all">
+        <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+    </head>
+    <body>
+        <div id="throbber" style="display:none; min-height:120px;"></div>
+        <div id="noty-holder"></div>
+        <div id="wrapper">
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse navbar-inverse">
+            <ul class="nav navbar-nav side-nav">
+                <li>
+                    <a href="employeehome.html"><i class="fa fa-fw fa-dashboard"></i>  DASHBOARD</a>
+                </li>
+                <li>
+                    <a href="#" data-toggle="collapse" data-target="#submenu-1"><i class="fa fa-fw fa-folder-open"></i> RECORDS<i class="fa fa-fw fa-angle-down pull-right"></i></a>
+                    <ul id="submenu-1" class="collapse">
+                        <li><a href="appliance.html"><i class="fa fa-angle-double-right"></i> Appliance</a></li>
+                        <li><a href="brand.html"><i class="fa fa-angle-double-right"></i> Brand</a></li>
+                        <li><a href="branch.html"><i class="fa fa-angle-double-right"></i> Branch</a></li>
+                        <li><a href="customer.html"><i class="fa fa-angle-double-right"></i> Customer</a></li>
+                        <li><a href="employee.html"><i class="fa fa-angle-double-right"></i> Employee</a></li>
+                        <li><a href="parts.html"><i class="fa fa-angle-double-right"></i> Parts</a></li>
+                        <li><a href="type.html"><i class="fa fa-angle-double-right"></i> Type</a></li>
+                        <li><a href="vendor.html"><i class="fa fa-angle-double-right"></i> Vendor</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="inventory.html"><i class="fa fa-fw fa-archive"></i>  INVENTORY</a>
+                </li>
+                <li>
+                    <a href="#" data-toggle="collapse" data-target="#submenu-3"><i class="fa fa-fw fa-paper-plane-o"></i>  TRANSACTIONS <i class="fa fa-fw fa-angle-down pull-right"></i></a>
+                    <ul id="submenu-3" class="collapse">
+                        <li><a href="estimate.html"><i class="fa fa-angle-double-right"></i> Estimates</a></li>
+                        <li><a href="#"><i class="fa fa-angle-double-right"></i> Something</a></li>
+                        <li><a href="#"><i class="fa fa-angle-double-right"></i> Something</a></li>
+                    </ul>
+                </li>  
+                <li>
+                    <a href="#"><i class="fa fa-fw fa-money"></i>  SALES</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-fw fa fa-cog"></i> SETTINGS</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-fw fa fa-sign-out"></i> LOG OUT</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </nav>
+
+    <div id="page-wrapper">
+        <div class="container-fluid">
+            <!-- Page Heading -->
+            <div class="content-wrap">
+                <div>
+                    <h3><b>INVENTORY</b></h3>
+                    <br>
+                </div>
+                <div class="row">
+                    <div class="col-sm-10">
+                        <table class="table table-condensed table-hover" style="border-collapse: collapse">
+                            <thead>
+                                <tr>
+                                    <th>Serial No.</th>
+                                    <th>Branch</th>
+                                    <th>Product Code</th>
+                                    <th>Model No.</th>
+                                    <th>Type</th>
+                                    <th>Brand</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    <td><button class="btn btn-success btn-xs pcode" type="button" data-toggle="modal" data-target="#serialModal">00001234</button></td>
+                                    <td>Tayuman</td>
+                                    <td>0001</td>
+                                    <td>00AB</td>
+                                    <td>Elesi</td>
+                                    <td>Electrolux</td>
+                                    
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!--****************Serial MODAL//Modal 1****************-->
+                    <div class="modal fade" id="serialModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        <h4 class="modal-title" id="myModalLabel">Item</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col-sm-9">
+                                            <ul class="nav nav-tabs">
+                                                <li class="active"><a href="#infoTab">Info</a></li>
+                                                <li><a href="#logsTab">Logs</a></li>
+                                            </ul>
+
+                                            <div class="tab-content">
+                                                <div id="infoTab" class="tab-pane fade in active">
+                                                    <br>
+                                                    <b>Product Code:</b> 000123<br>
+                                                    <b>Model No.:</b> 000123 <br>
+                                                    <b>Type:</b> Kita <br>
+                                                    <b>Brand:</b> Electrolux <br>
+                                                    <b>Serial:</b> 123456
+                                                </div>
+                                                <div id="logsTab" class="tab-pane fade">
+                                                    <table class="table table-condensed table-hover">
+                                                        <thead>
+                                                            <th>Date</th>
+                                                            <th>Remarks</th>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>10-18-2017</td>
+                                                                <td>Relocated to xxx</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>4-8-2017</td>
+                                                                <td>Added to Inventory</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <button type="button" class="btn btn-success btn-block btn-sm" data-toggle="modal" data-target="#allocateModal" data-dismiss="modal">Allocate</button>
+                                            <hr>
+                                            <h4>Danger Zone</h4>
+                                            <form>
+                                                <button type="button" class="btn btn-danger btn-block btn-sm" data-toggle="modal" data-target="#deleteModal" data-dismiss="modal">Delete</button>
+                                                <button type="button" class="btn btn-danger btn-block btn-sm" data-toggle="modal" data-target="#relocateModal" data-dismiss="modal">Relocate</button>
+                                             </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- /.modal -->
+
+                    <!--****************Delete// Modal 2****************-->
+                                        <div class="modal fade" id="deleteModal" tabindex="-1">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                    <h4 class="modal-title" id="myModalLabel">Delete Item</h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                    Are you sure you want to delete this item?
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Yes</button>
+                                                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#serialModal" data-dismiss="modal">No</button>
+                                                </div>
+                                                </div>
+                                            </div>
+                                        </div><!--./modal2-->
+
+                                        <!--****************Relocate// Modal 3****************-->
+                                        <div class="modal fade" id="relocateModal" tabindex="-1">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                    <h4 class="modal-title" id="myModalLabel">Relocate Item</h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <form class="form-horizontal">
+                                                        <div class="form-group">
+                                                            <label for="relbranch" class="col-sm-3 control-label">Branch</label>
+                                                            <div class="col-sm-9">
+                                                                <select class="form-control" id="branch">
+                                                                    <option>---Select Branch---</option>
+                                                                    <option>Main</option>
+                                                                    <option>Pasig</option>
+                                                                    <option>Tayuman</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Relocate</button>
+                                                    <button type="button" class="btn btn-default" data-toggle="modal" data-target="#serialModal" data-dismiss="modal">Cancel</button>
+                                                </div>
+                                                </div>
+                                            </div>
+                                        </div><!--./modal3-->
+
+                                        <!--****************Allocate// Modal 4****************-->
+                                        <div class="modal fade" id="allocateModal" tabindex="-1">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                    <h4 class="modal-title" id="myModalLabel">Allocate Item</h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <form class="form-horizontal">
+                                                        <div class="form-group">
+                                                            <label for="relbranch" class="col-sm-3 control-label">Branch</label>
+                                                            <div class="col-sm-9">
+                                                                <select class="form-control" id="branch">
+                                                                    <option>---Select Branch---</option>
+                                                                    <option>Main</option>
+                                                                    <option>Pasig</option>
+                                                                    <option>Tayuman</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <label for="position" class="col-sm-3 control-label">Position</label>
+                                                            <div class="col-sm-9">
+                                                                <select class="form-control" id="position">
+                                                                    <option>---Select Position---</option>
+                                                                    <option>Accountant</option>
+                                                                    <option>Driver</option>
+                                                                    <option>Technician</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <label for="name" class="col-sm-3 control-label">Name</label>
+                                                            <div class="col-sm-9">
+                                                                <input type="text" class="form-control" id="name" placeholder="Enter Name" required>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Allocate</button>
+                                                    <button type="button" class="btn btn-default" data-toggle="modal" data-target="#serialModal" data-dismiss="modal">Cancel</button>
+                                                </div>
+                                                </div>
+                                            </div>
+                                        </div><!--./modal4-->
+
+                    <!--****************FILTER SEARCH STUFF********************-->
+                    <div class="col-sm-2">
+                        <form>
+                            <button type="button" class="btn btn-primary btn-flat btn-block" data-toggle="modal" data-target="#addInventoryModal"><i class="fa fa-plus"></i> Add Something</button>
+                        </form> 
+                        <div id="addInventoryModal" class="modal fade" tabindex="-1" role="dialog">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        <h4 class="modal-title">Add to Inventory</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form class="form-horizontal">
+                                            <div class="form-group">
+                                                <label for="brand" class="col-sm-3 control-label">Brand</label>
+                                                <div class="col-sm-9">
+                                                    <select class="form-control" id="brand">
+                                                        <option>---Select Brand---</option>
+                                                        <option>Electrolux</option>
+                                                        <option>Haier</option>
+                                                        <option>Toshiba</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="type" class="col-sm-3 control-label">Type</label>
+                                                <div class="col-sm-9">
+                                                    <select class="form-control" id="type">
+                                                        <option>---Select Type---</option>
+                                                        <option>Dryer</option>
+                                                        <option>Front Load Washer</option>
+                                                        <option>LED</option>
+                                                        <option>Refrigerator Two Door</option>
+                                                        <option>Top Load Washer</option>
+                                                        <option>Washing Machine</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="pcode" class="col-sm-3 control-label">Product Code</label>
+                                                <div class="col-sm-9">
+                                                    <select class="form-control" id="pcode">
+                                                        <option>---Select Product Code---</option>
+                                                        <option>00001234</option>
+                                                        <option>00001235</option>
+                                                        <option>00001236</option>
+                                                        <option>00001237</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="modelno" class="col-sm-3 control-label">Model No.</label>
+                                                <div class="col-sm-9">
+                                                    <select class="form-control" id="modelno">
+                                                        <option>---Select Model No.---</option>
+                                                        <option>00001234</option>
+                                                        <option>00001235</option>
+                                                        <option>00001236</option>
+                                                        <option>00001237</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="branch" class="col-sm-3 control-label">Branch</label>
+                                                <div class="col-sm-9">
+                                                    <select class="form-control" id="branch">
+                                                        <option>---Select Model No.---</option>
+                                                        <option>Main</option>
+                                                        <option>Pasig</option>
+                                                        <option>Tayuman</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="serial" class="col-sm-3 control-label">Serial No.</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" class="form-control" id="serial" placeholder="Serial No." required>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary">Add</button>
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>                    
+                                    </div>
+                                    </div><!-- /.modal-content -->
+                                </div><!-- /.modal-dialog -->
+                            </div><!-- /.modal -->
+                            <hr>
+                        <form>
+                            <div><!--BRANCH CHECKBOX-->
+                                <h4>Branch</h4>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" value="main">Main
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" value="pasig">Pasig
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" value="tayuman">Tayuman
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" value="somewhere">Somewhere
+                                    </label>
+                                </div>
+                            </div><!--. brand checkbox-->
+                            <hr>
+                            <div><!--BRAND CHECKBOX-->
+                                <h4>Brand</h4>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" value="3d">3D
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" value="electrolux">Electrolux
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" value="haier">Haier
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" value="lg">LG
+                                    </label>
+                                </div>
+                            </div><!--. brand checkbox-->
+                            <hr>
+                            <div><!--TYPE CHECKBOX-->
+                                <h4>Brand</h4>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" value="compressor">Compressor
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" value="led">LED
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" value="part1">Part1
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" value="part2">Part2
+                                    </label>
+                                </div>
+                            </div><!--. type checkbox-->
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.container-fluid -->
+    </div>
+    <!-- /#page-wrapper -->
+</div><!-- /#wrapper -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+    </body>
+</html>
